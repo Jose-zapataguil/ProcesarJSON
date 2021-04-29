@@ -59,7 +59,17 @@ Generaremos un fichero .JSON para cada uno de los jobs con los siguientes datos:
 
   ###### CMD 
   
-  A la hora de ejecutarlo desde el cmd
+  Al igual que con el paso anterior para ejecutarlo desde el cmd descargamos el proyecto desde el github (https://github.com/Jose-zapataguil/ProcesarJSON) y lo descomprimimos. Abrimos una terminal y nos colocamos en la carpeta donde esté el .jar.
+  
+  Ejecutamos el comando "java -jar ProcesarJSON.jar rutaEntrada rutaSalida"
+  
+   ![image](https://user-images.githubusercontent.com/81249604/116530175-054bec80-a8de-11eb-891d-12ab864eca13.png)
+   
+   Nos situamos en la carpeta que le hemos indicado de salida y comprobamos que nos ha generado todos los ficheros.
+   
+   ![image](https://user-images.githubusercontent.com/81249604/116530416-4b08b500-a8de-11eb-8862-daa2a08a9589.png)
+
+
 
 
 
