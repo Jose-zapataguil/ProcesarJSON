@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ProcesarJSON:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ProcesarJSON_jar</output-path>
+    <root id="archive" name="ProcesarJSON.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="ProcesarJSON" />
+      <element id="module-output" name="procesar" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/json/json/20210307/json-20210307.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
