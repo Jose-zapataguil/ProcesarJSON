@@ -38,6 +38,12 @@ Generaremos un fichero .JSON para cada uno de los jobs con los siguientes datos:
   
   
   Aunque la información variará dependiendo del tipo de job que procesemos (kirby, hammurabi...). Siempre se asemejarán al siguiente formato.
+  
+  ### Formas de Ejecución
+  
+ Tenemos dos maneras de ejecutar el programa:
+ 
+  -IntelliJ. Para ejecutarlo desde IntelliJ debemos descargarnos el proyecto desde el repositorio de github (https://github.com/Jose-zapataguil/ProcesarJSON) y abrirlo. Es necesario indicarle dos parametros a la hora de la ejecución, para ello debemos editar 
 
   
 
