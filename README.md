@@ -28,10 +28,9 @@ Generaremos un fichero .JSON para cada uno de los jobs con los siguientes datos:
   
   ## Ejecución
   
-  El fichero del cual vamos a extraer la información contiene muchos jobs con el siguiente formato.
+  El archivo del cual vamos a extraer la información contiene muchos jobs.
   
  
-  
   De aqui nos vamos a quedar con la información antes mencionada, introduciendola en un fichero por cada uno de los jobs.
   
   Una vez se ejecute nos generará todos los ficheros donde le hayamos indicado, en este caso en una carpeta dentro del directorio del proyecto. Para el nombre de cada fichero    hemos utilizado el id añadiendo la extension .json.
