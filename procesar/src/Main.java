@@ -5,10 +5,17 @@ import org.json.JSONTokener;
 import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
-        String ruta = "C:\\Users\\admin\\Downloads\\gl.swd1.app-id-17304.dev.json";
+    public static void main(String[] args) throws Exception {
+        String rutaEntrada = "";
+        String rutaSalida = "";
+        if (args.length == 2) {
+            rutaEntrada = args[0];
+            rutaSalida = args[1];
+        }else{
+            throw new Exception("Parametros no especificados");
+        }
         try {
-            FileInputStream in = new FileInputStream(ruta);
+            FileInputStream in = new FileInputStream(rutaEntrada);
             JSONTokener tokener = new JSONTokener(in);
             JSONObject obj = new JSONObject(tokener);
             JSONObject data = (JSONObject) obj.get("data");
@@ -30,6 +37,9 @@ public class Main {
                     JSONArray tags = new JSONArray();
                     if (_id.contains("raw")) {
                         tags.put("workday");
+                        if (_id.contains("ldap")){
+                            tags.put("ldap");
+                        }
                         tags.put("raw");
                         tags.put("kirby");
                     } else if (_id.contains("mastertrck")) {
@@ -59,6 +69,9 @@ public class Main {
                     JSONArray tags = new JSONArray();
                     if (_id.contains("raw")) {
                         tags.put("workday");
+                        if (_id.contains("ldap")){
+                            tags.put("ldap");
+                        }
                         tags.put("raw");
                         tags.put("hammurabi");
                     } else if (_id.contains("staging")) {
@@ -72,9 +85,9 @@ public class Main {
                         }
                         tags.put("tracking");
                         tags.put("hammurabi");
-                    }else if(_id.contains("master")){
+                    } else if (_id.contains("master")) {
                         tags.put("workday");
-                        if (_id.contains("ldap")){
+                        if (_id.contains("ldap")) {
                             tags.put("ldap");
                         }
                         tags.put("master");
@@ -90,7 +103,7 @@ public class Main {
                 json.put("params", params);
                 json.put("env", new JSONObject());
                 json.put("kind", "processing");
-                FileWriter f = new FileWriter("salida/" + _id + ".json");
+                FileWriter f = new FileWriter(rutaSalida + "/" + _id + ".json");
                 f.write(json.toString());
                 f.close();
             }
