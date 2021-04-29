@@ -43,7 +43,10 @@ Generaremos un fichero .JSON para cada uno de los jobs con los siguientes datos:
   
  Tenemos dos maneras de ejecutar el programa:
  
-  -IntelliJ. Para ejecutarlo desde IntelliJ debemos descargarnos el proyecto desde el repositorio de github (https://github.com/Jose-zapataguil/ProcesarJSON) y abrirlo. Es necesario indicarle dos parametros a la hora de la ejecución, para ello debemos editar 
+  -IntelliJ. Para ejecutarlo desde IntelliJ debemos descargarnos el proyecto desde el repositorio de github (https://github.com/Jose-zapataguil/ProcesarJSON) y abrirlo. Es necesario indicarle dos parametros a la hora de la ejecución, para ello debemos editar la configuración del main.
+  
+  ![image](https://user-images.githubusercontent.com/81249604/116528635-5a86fe80-a8dc-11eb-8d2d-8ecc67e49ca4.png)
+
 
   
 
