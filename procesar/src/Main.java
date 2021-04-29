@@ -11,7 +11,7 @@ public class Main {
         if (args.length == 2) {
             rutaEntrada = args[0];
             rutaSalida = args[1];
-        }else{
+        } else {
             throw new Exception("Parametros no especificados");
         }
         try {
@@ -37,7 +37,7 @@ public class Main {
                     JSONArray tags = new JSONArray();
                     if (_id.contains("raw")) {
                         tags.put("workday");
-                        if (_id.contains("ldap")){
+                        if (_id.contains("ldap")) {
                             tags.put("ldap");
                         }
                         tags.put("raw");
@@ -46,22 +46,16 @@ public class Main {
                         tags.put("workday");
                         if (_id.contains("ldap")) {
                             tags.put("ldap");
-                            tags.put("tracking");
-                            tags.put("kirby");
-                        } else {
-                            tags.put("tracking");
-                            tags.put("kirby");
                         }
+                        tags.put("tracking");
+                        tags.put("kirby");
                     } else if (_id.contains("master")) {
                         tags.put("workday");
                         if (_id.contains("ldap")) {
                             tags.put("ldap");
-                            tags.put("master");
-                            tags.put("kirby");
-                        } else {
-                            tags.put("master");
-                            tags.put("kirby");
                         }
+                        tags.put("master");
+                        tags.put("kirby");
                     }
                     json.put("tags", tags);
                 } else if (tipo.equals("hammurabi")) {
@@ -69,7 +63,7 @@ public class Main {
                     JSONArray tags = new JSONArray();
                     if (_id.contains("raw")) {
                         tags.put("workday");
-                        if (_id.contains("ldap")){
+                        if (_id.contains("ldap")) {
                             tags.put("ldap");
                         }
                         tags.put("raw");
