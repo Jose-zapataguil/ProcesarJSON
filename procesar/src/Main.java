@@ -3,13 +3,11 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import java.io.*;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
-        String[] validos = {"ktc1", "ktc2", "ktc3", "ktc4", "swd1"};
         String rutaEntrada;
         String rutaSalida;
         String versionKirby = "";
@@ -63,7 +61,7 @@ public class Main {
                 JSONObject params = (JSONObject) config.get("params");
                 if (tipo.equals("spark")) {
                     String configUrl = params.get("configUrl").toString();
-                    if (Arrays.stream(validos).anyMatch(configUrl::contains) && configUrl.contains(uuaa)) {
+                    if (configUrl.contains(uuaa)) {
                         json.put("runtime", runtime.get("id") + ":" + runtime.get("version"));
                         params.keySet().remove("repoSecurity");
                         JSONArray tags = new JSONArray();
@@ -101,7 +99,7 @@ public class Main {
                     }
                 } else if (tipo.equals("hammurabi")) {
                     String configUrl = params.get("configUrl").toString();
-                    if (Arrays.stream(validos).anyMatch(configUrl::contains) && configUrl.contains(uuaa)) {
+                    if (configUrl.contains(uuaa)) {
                         json.put("runtime", runtime.get("id"));
                         JSONArray tags = new JSONArray();
                         if (_id.contains("raw")) {
