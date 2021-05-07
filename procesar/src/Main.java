@@ -40,7 +40,7 @@ public class Main {
                 }
             }
             FileInputStream in = new FileInputStream(rutaEntrada);
-            FileWriter fw = new FileWriter(rutaSalida +"/"+ uuaa + "/nocreados.log");
+            FileWriter fw = new FileWriter(rutaSalida + "/" + uuaa + "/nocreados.log");
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter out = new PrintWriter(bw);
             JSONTokener tokener = new JSONTokener(in);
@@ -153,11 +153,11 @@ public class Main {
                         if (!dir.exists()) {
                             dir.mkdirs();
                         }
-                        f = new FileWriter(rutaSalida + "/" + uuaa + "/hdfs/" + _id + ".json");
+                        f = new FileWriter(dir.getPath() + "/" + _id + ".json");
                     } else {
                         f = new FileWriter(rutaSalida + "/" + uuaa + "/" + _id + ".json");
                     }
-                    f.write(json.toString());
+                    f.write(json.toString(4));
                     f.close();
                 }
             }
