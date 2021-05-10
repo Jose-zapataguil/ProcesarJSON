@@ -40,19 +40,26 @@ Tambien existen jobs que no se procesan, que son los que no cuentan con uuaa en 
   
   Y lo ejecutamos.
   
-  ![image](https://user-images.githubusercontent.com/81249604/116529219-ff094080-a8dc-11eb-940f-985310f89fc8.png)
+  ![image](https://user-images.githubusercontent.com/81249604/117668371-2944e300-b1a6-11eb-8ae9-e42980eeb992.png)
+
 
   ###### CMD 
   
   Al igual que con el paso anterior para ejecutarlo desde el cmd descargamos el proyecto desde el github (https://github.com/Jose-zapataguil/ProcesarJSON) y lo descomprimimos. Abrimos una terminal y nos colocamos en la carpeta donde esté el .jar.
   
-  Ejecutamos el comando "java -jar ProcesarJSON.jar rutaEntrada rutaSalida"
+  Ejecutamos el comando "java -jar ProcesarJSON.jar "rutaJSON"
   
-   ![image](https://user-images.githubusercontent.com/81249604/116530175-054bec80-a8de-11eb-891d-12ab864eca13.png)
+   ![image](https://user-images.githubusercontent.com/81249604/117668561-585b5480-b1a6-11eb-8a31-8999a3c31c65.png)
+
    
-   Nos situamos en la carpeta que le hemos indicado de salida y comprobamos que nos ha generado todos los ficheros.
+   Y comprobamos la ruta de salida para verificar que todos los ficheros se han creado correctamente.
    
-   ![image](https://user-images.githubusercontent.com/81249604/116530416-4b08b500-a8de-11eb-8862-daa2a08a9589.png)
+   ![image](https://user-images.githubusercontent.com/81249604/117668705-7d4fc780-b1a6-11eb-820a-36aa6b707726.png)
+
+
+
+  
+  ![image](https://user-images.githubusercontent.com/81249604/117668737-83de3f00-b1a6-11eb-8031-04cb9f94dba7.png)
 
 
 
