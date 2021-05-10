@@ -7,15 +7,15 @@ public class GenerarFicheros {
 
     GenerarFicheros(String rutaSalida, String uuaa) {
         try {
-            this.fw = new FileWriter(rutaSalida + "/" + uuaa + "/nocreados.log");
-            this.bw = new BufferedWriter(fw);
-            this.out = new PrintWriter(bw);
             File directorio = new File(rutaSalida + "/" + uuaa);
             if (!directorio.exists()) {
                 if (directorio.mkdirs()) {
                     System.out.println("Directorio creado");
                 }
             }
+            this.fw = new FileWriter(rutaSalida + "/" + uuaa + "/nocreados.log");
+            this.bw = new BufferedWriter(fw);
+            this.out = new PrintWriter(bw);
         } catch (IOException e) {
             e.printStackTrace();
         }
