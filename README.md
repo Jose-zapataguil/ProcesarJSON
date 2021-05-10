@@ -1,20 +1,10 @@
 # ProcesarJSON
 
 ## Objetivo
+El objetivo de este programa es clasificar la iformación de varios ficheros de jobs, de los cuales nos vamos a quedar con cierta información y los vamos a guardar en ficheros
+.json en función de su uuaa.
+Tambien existen jobs que no se procesan, que son los que no cuentan con uuaa en el configurl, o no tienen el parámetro "extralibs". En ese caso se indicará que ese job no ha sido procesado en el fichero de log correspondiente.
 
-El objetivo de este programa es acceder a un fichero .JSON con muchos objetos (jobs) y extraer cierta información de cada uno de ellos.
-
-Generaremos un fichero .JSON para cada uno de los jobs con los siguientes datos:
-
-  -Id
-  -Description
-  -Size
-  -Runtime
-  -Streaming
-  -Params
-  -Env
-  -Tags
-  -Kind
   
   ## Requisitos
   
@@ -28,12 +18,8 @@ Generaremos un fichero .JSON para cada uno de los jobs con los siguientes datos:
   
   ## Ejecución
   
-  El archivo del cual vamos a extraer la información contiene muchos jobs.
-  
- 
-  De aqui nos vamos a quedar con la información antes mencionada, introduciendola en un fichero por cada uno de los jobs.
-  
-  Una vez se ejecute nos generará todos los ficheros donde le hayamos indicado, en este caso en una carpeta dentro del directorio del proyecto. Para el nombre de cada fichero    hemos utilizado el id añadiendo la extension .json.
+  El proyecto contiene un archivo "ProcesarJSON.jar" el cual podemos ejecutar desde la consola de comandos (cmd) o bien abrir el proyecto desde IntelliJ y ejecutarlo desde ahi.
+  En ambos casos deberemos proporcionarle un parametro para la ejecución, el cual será un fichero JSON con la información necesaria de los jobs para su procesado.
 
   
   
