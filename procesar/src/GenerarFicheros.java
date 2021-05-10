@@ -41,13 +41,18 @@ public class GenerarFicheros {
         }
     }
 
-    public void crearLog(String _id, String uuaa) {
+    public void crearLogNormal(String _id, String uuaa) {
         out.println("El siguiente JSON no se ha creado por que la uuaa " + uuaa + " no coincide con la de configUrl");
         out.println("***" + _id + "***");
 
     }
 
-    public void cerrarLog(){
+    public void crearLogNoExtra(String _id) {
+        out.println("El siguiente JSON no se ha creado porque no continene el parametro extraLibs");
+        out.println("***" + _id + "***");
+    }
+
+    public void cerrarLog() {
         out.close();
     }
 }

@@ -14,7 +14,7 @@ public class ProcesarJSON {
     private String releasehammurabi;
     private String versionhammurabi;
 
-    ProcesarJSON(String [] valores) {
+    ProcesarJSON(String[] valores) {
         LeerJSON lj = new LeerJSON(valores[1]);
         this.array = lj.obtenerElemento();
         this.uuaa = valores[0];
@@ -47,37 +47,42 @@ public class ProcesarJSON {
                 String configUrl = old_params.get("configUrl").toString();
                 if (configUrl.contains(this.uuaa)) {
                     json.put("runtime", runtime.get("id") + ":" + runtime.get("version"));
-                    params = obtenerParams(old_params);
-                    JSONArray tags = new JSONArray();
-                    if (_id.contains("raw")) {
-                        tags.put("workday");
-                        if (_id.contains("ldap")) {
-                            tags.put("ldap");
+                    if (old_params.has("extraLibs")) {
+                        params = obtenerParams(old_params);
+                        JSONArray tags = new JSONArray();
+                        if (_id.contains("raw")) {
+                            tags.put("workday");
+                            if (_id.contains("ldap")) {
+                                tags.put("ldap");
+                            }
+                            tags.put("raw");
+                            tags.put("kirby");
+                        } else if (_id.contains("mastertrck")) {
+                            tags.put("workday");
+                            if (_id.contains("ldap")) {
+                                tags.put("ldap");
+                            }
+                            tags.put("tracking");
+                            tags.put("kirby");
+                        } else if (_id.contains("master")) {
+                            tags.put("workday");
+                            if (_id.contains("ldap")) {
+                                tags.put("ldap");
+                            }
+                            tags.put("master");
+                            tags.put("kirby");
                         }
-                        tags.put("raw");
-                        tags.put("kirby");
-                    } else if (_id.contains("mastertrck")) {
-                        tags.put("workday");
-                        if (_id.contains("ldap")) {
-                            tags.put("ldap");
+                        json.put("tags", tags);
+                        if (!this.versionkirby.isEmpty()) {
+                            String val = rutaConfig(old_params.get("configUrl").toString(), this.versionkirby, this.uuaa, this.releasekirby);
+                            params.put("configUrl", val);
                         }
-                        tags.put("tracking");
-                        tags.put("kirby");
-                    } else if (_id.contains("master")) {
-                        tags.put("workday");
-                        if (_id.contains("ldap")) {
-                            tags.put("ldap");
-                        }
-                        tags.put("master");
-                        tags.put("kirby");
-                    }
-                    json.put("tags", tags);
-                    if (!this.versionkirby.isEmpty()) {
-                        String val = rutaConfig(old_params.get("configUrl").toString(), this.versionkirby, this.uuaa, this.releasekirby);
-                        params.put("configUrl", val);
+                    } else {
+                        this.gf.crearLogNoExtra(_id);
+                        crear = false;
                     }
                 } else {
-                    this.gf.crearLog(_id, this.uuaa);
+                    this.gf.crearLogNormal(_id, this.uuaa);
                     crear = false;
                 }
             } else if (tipo.equals("hammurabi")) {
@@ -118,7 +123,7 @@ public class ProcesarJSON {
                         params.put("configUrl", val);
                     }
                 } else {
-                    this.gf.crearLog(_id, this.uuaa);
+                    this.gf.crearLogNormal(_id, this.uuaa);
                     crear = false;
                 }
             } else {
@@ -137,23 +142,40 @@ public class ProcesarJSON {
     }
 
     private static String rutaConfig(String oldRuta, String version, String uuaa, String release) {
-        int index1 = oldRuta.lastIndexOf("/", oldRuta.indexOf("/" + uuaa) - 1) + 1;
         String newRuta = oldRuta.substring(0, oldRuta.indexOf("artifactory/") + 12);
+        int index1 = oldRuta.lastIndexOf("/", oldRuta.indexOf("/" + uuaa) - 1) + 1;
         int index2 = oldRuta.indexOf("/", (oldRuta.indexOf("/artifactory/") + 12) + 1);
-        newRuta += release + oldRuta.substring(index2, index1) + version + "/" + oldRuta.substring(oldRuta.indexOf(uuaa));
+        String ult = oldRuta.substring(oldRuta.indexOf(uuaa));
+        if (version.equalsIgnoreCase("NA") && release.equalsIgnoreCase("NA")) {
+            newRuta = oldRuta;
+        } else if (release.equalsIgnoreCase("NA") && !version.equalsIgnoreCase("NA")) {
+            newRuta = oldRuta.substring(0, index1) + version + "/" + ult;
+        } else if (!release.equalsIgnoreCase("NA") && version.equalsIgnoreCase("NA")) {
+            newRuta += release + oldRuta.substring(index2);
+        } else {
+            newRuta += release + oldRuta.substring(index2, index1) + version + "/" + ult;
+        }
         return newRuta;
     }
 
     private JSONObject obtenerParams(JSONObject old_params) {
         JSONObject params = new JSONObject();
-        if (!params.has("sparkHistoryEnabled")){
-            params.put("sparkHistoryEnabled",true);
-        }else{
+        if (!params.has("sparkHistoryEnabled")) {
+            params.put("sparkHistoryEnabled", true);
+        } else {
             params.put("sparkHistoryEnabled", old_params.get("sparkHistoryEnabled"));
         }
         params.put("mainClass", old_params.get("mainClass"));
-        params.put("artifactUrl", this.artifactUrl);
-        params.put("extraLibs", this.extraLibs);
+        if (this.artifactUrl.equalsIgnoreCase("NA")) {
+            params.put("artifactUrl", old_params.get("artifactUrl"));
+        } else {
+            params.put("artifactUrl", this.artifactUrl);
+        }
+        if (this.extraLibs.equalsIgnoreCase("NA")) {
+            params.put("extraLibs", old_params.get("extraLibs"));
+        } else {
+            params.put("extraLibs", this.extraLibs);
+        }
         return params;
     }
 }
