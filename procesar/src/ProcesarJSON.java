@@ -14,7 +14,7 @@ public class ProcesarJSON {
     private String releasehammurabi;
     private String versionhammurabi;
 
-    ProcesarJSON(String rutaEntrada, String uuaa, String rutaSalida,String releasekirby,String versionkirby,String artifactUrl,String extraLibs,String releasehammurabi,String versionhammurabi) {
+    ProcesarJSON(String rutaEntrada, String uuaa, String rutaSalida, String releasekirby, String versionkirby, String artifactUrl, String extraLibs, String releasehammurabi, String versionhammurabi) {
         LeerJSON lj = new LeerJSON(rutaEntrada);
         this.array = lj.obtenerElemento();
         this.uuaa = uuaa;
@@ -26,7 +26,6 @@ public class ProcesarJSON {
         this.extraLibs = extraLibs;
         this.releasehammurabi = releasehammurabi;
         this.versionhammurabi = versionhammurabi;
-
     }
 
     public void procesar() {
@@ -41,12 +40,13 @@ public class ProcesarJSON {
             json.put("size", config.get("size"));
             JSONObject runtime = (JSONObject) objeto.get("runtime");
             String tipo = (String) runtime.get("id");
-            JSONObject params = (JSONObject) config.get("params");
+            JSONObject old_params = (JSONObject) config.get("params");
+            JSONObject params = new JSONObject();
             if (tipo.equals("spark")) {
-                String configUrl = params.get("configUrl").toString();
+                String configUrl = old_params.get("configUrl").toString();
                 if (configUrl.contains(this.uuaa)) {
                     json.put("runtime", runtime.get("id") + ":" + runtime.get("version"));
-                    params.keySet().remove("repoSecurity");
+                    params = obtenerParams(old_params);
                     JSONArray tags = new JSONArray();
                     if (_id.contains("raw")) {
                         tags.put("workday");
@@ -71,18 +71,19 @@ public class ProcesarJSON {
                         tags.put("kirby");
                     }
                     json.put("tags", tags);
-//                    if (!versionKirby.isEmpty()) {
-//                        String val = rutaConfig(params.get("configUrl").toString(), versionKirby, uuaa);
-//                        params.put("configUrl", val);
-//                    }
+                    if (!this.versionkirby.isEmpty()) {
+                        String val = rutaConfig(old_params.get("configUrl").toString(), this.versionkirby, this.uuaa, this.releasekirby);
+                        params.put("configUrl", val);
+                    }
                 } else {
                     this.gf.crearLog(_id, this.uuaa);
                     crear = false;
                 }
             } else if (tipo.equals("hammurabi")) {
-                String configUrl = params.get("configUrl").toString();
+                String configUrl = old_params.get("configUrl").toString();
                 if (configUrl.contains(this.uuaa)) {
                     json.put("runtime", runtime.get("id"));
+                    params = old_params;
                     JSONArray tags = new JSONArray();
                     if (_id.contains("raw")) {
                         tags.put("workday");
@@ -111,10 +112,10 @@ public class ProcesarJSON {
                         tags.put("hammurabi");
                     }
                     json.put("tags", tags);
-//                    if (!versionHammurabi.isEmpty()) {
-//                        String val = rutaConfig(params.get("configUrl").toString(), versionHammurabi, uuaa);
-//                        params.put("configUrl", val);
-//                    }
+                    if (!this.versionhammurabi.isEmpty()) {
+                        String val = rutaConfig(params.get("configUrl").toString(), this.versionhammurabi, this.uuaa, this.releasehammurabi);
+                        params.put("configUrl", val);
+                    }
                 } else {
                     this.gf.crearLog(_id, this.uuaa);
                     crear = false;
@@ -134,12 +135,24 @@ public class ProcesarJSON {
         this.gf.cerrarLog();
     }
 
-    public static String rutaConfig(String oldRuta, String version, String uuaa) {
-        String release = "spark-global-libs-release-local";
+    private static String rutaConfig(String oldRuta, String version, String uuaa, String release) {
         int index1 = oldRuta.lastIndexOf("/", oldRuta.indexOf("/" + uuaa) - 1) + 1;
         String newRuta = oldRuta.substring(0, oldRuta.indexOf("artifactory/") + 12);
         int index2 = oldRuta.indexOf("/", (oldRuta.indexOf("/artifactory/") + 12) + 1);
         newRuta += release + oldRuta.substring(index2, index1) + version + "/" + oldRuta.substring(oldRuta.indexOf(uuaa));
         return newRuta;
+    }
+
+    private JSONObject obtenerParams(JSONObject old_params) {
+        JSONObject params = new JSONObject();
+        if (!params.has("sparkHistoryEnabled")){
+            params.put("sparkHistoryEnabled",true);
+        }else{
+            params.put("sparkHistoryEnabled", old_params.get("sparkHistoryEnabled"));
+        }
+        params.put("mainClass", old_params.get("mainClass"));
+        params.put("artifactUrl", this.artifactUrl);
+        params.put("extraLibs", this.extraLibs);
+        return params;
     }
 }
