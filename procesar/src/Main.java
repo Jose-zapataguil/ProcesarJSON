@@ -6,15 +6,18 @@ import java.io.*;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-       iniConfig();
-
+       if (args.length == 0){
+           throw new Exception("Es necesario la ruta del fichero de configuración");
+       }else{
+           iniConfig(args[0]);
+       }
     }
 
 
-    public static void iniConfig() {
+    public static void iniConfig(String ruta) {
         try {
 
-            FileInputStream in = new FileInputStream("./config.json");
+            FileInputStream in = new FileInputStream(ruta);
             JSONTokener tokener = new JSONTokener(in);
             JSONArray jsonArray = new JSONArray(tokener);
             String [] valores = new String[9];
@@ -33,7 +36,6 @@ public class Main {
                 ProcesarJSON pj = new ProcesarJSON(valores);
                 pj.procesar();
                 System.out.println("Ficheros creados correctamente");
-
             }
 
         } catch (Exception e) {
