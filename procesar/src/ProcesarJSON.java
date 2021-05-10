@@ -7,13 +7,26 @@ public class ProcesarJSON {
     private String uuaa;
     private String rutaSalida;
     private GenerarFicheros gf;
+    private String releasekirby;
+    private String versionkirby;
+    private String artifactUrl;
+    private String extraLibs;
+    private String releasehammurabi;
+    private String versionhammurabi;
 
-    ProcesarJSON(String rutaEntrada, String uuaa, String rutaSalida) {
+    ProcesarJSON(String rutaEntrada, String uuaa, String rutaSalida,String releasekirby,String versionkirby,String artifactUrl,String extraLibs,String releasehammurabi,String versionhammurabi) {
         LeerJSON lj = new LeerJSON(rutaEntrada);
         this.array = lj.obtenerElemento();
         this.uuaa = uuaa;
         this.rutaSalida = rutaSalida;
         this.gf = new GenerarFicheros(rutaSalida, uuaa);
+        this.releasekirby = releasekirby;
+        this.versionkirby = versionkirby;
+        this.artifactUrl = artifactUrl;
+        this.extraLibs = extraLibs;
+        this.releasehammurabi = releasehammurabi;
+        this.versionhammurabi = versionhammurabi;
+
     }
 
     public void procesar() {

@@ -8,48 +8,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        iniConfig();
-        /*
-        Scanner sc = new Scanner(System.in);
-        String rutaEntrada;
-        String rutaSalida;
-        String uuaa = "";
-        String versionKirby = "";
-        String versionHammurabi = "";
-        if (args.length == 2) {
-            rutaEntrada = args[0];
-            rutaSalida = args[1];
-        } else {
-            throw new Exception("Parametros no especificados");
-        }
-        System.out.println("¿Desea modificar la version de Kirby? (Y/N)");
-        String resp = sc.next();
-        if (resp.equalsIgnoreCase("Y")) {
-            System.out.println("Version Kirby:");
-            versionKirby = sc.next();
-        }
-        System.out.println("¿Desea modificar la version de Hammurabi? (Y/N)");
-        resp = sc.next();
-        if (resp.equalsIgnoreCase("Y")) {
-            System.out.println("Version Hammurabi:");
-            versionHammurabi = sc.next();
-        }
-        try {
-            uuaa = rutaEntrada.substring(rutaEntrada.lastIndexOf("\\") + 1);
-            uuaa = uuaa.substring(uuaa.indexOf(".") + 1, uuaa.indexOf(".", uuaa.indexOf(".") + 1));
-            File directorio = new File(rutaSalida + "/" + uuaa);
-            if (!directorio.exists()) {
-                if (directorio.mkdirs()) {
-                    System.out.println("Directorio creado");
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        ProcesarJSON pj = new ProcesarJSON(rutaEntrada, uuaa, rutaSalida);
-        pj.procesar();
-        System.out.println("Ficheros creados correctamente");
-        */
+       iniConfig();
+
+
 
     }
 
@@ -62,26 +23,34 @@ public class Main {
         return newRuta;
     }
 
-    public static String[] iniConfig() {
-        String[] valores = new String[6];
+    public static void iniConfig() {
         try {
-            FileInputStream in = new FileInputStream("./config.json");
 
+            FileInputStream in = new FileInputStream("./config.json");
             JSONTokener tokener = new JSONTokener(in);
             JSONArray jsonArray = new JSONArray(tokener);
 
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject object = jsonArray.getJSONObject(i);
                 String uuaa = object.getString("uuaa");
-                System.out.println(uuaa);
+                String rutaEntrada = object.getString("entrada");
+                String rutaSalida = object.getString("salida");
+                String releasekirby = object.getString("releasekirby");
+                String versionkirby = object.getString("versionkirby");
+                String artifactUrl = object.getString("artifactUrl");
+                String extraLibs = object.getString("extraLibs");
+                String releasehammurabi = object.getString("releasehammurabi");
+                String versionhammurabi = object.getString("versionhammurabi");
+
+                ProcesarJSON pj = new ProcesarJSON(rutaEntrada, uuaa, rutaSalida,releasekirby,versionkirby,artifactUrl,extraLibs,releasehammurabi,versionhammurabi);
+                pj.procesar();
+                System.out.println("Ficheros creados correctamente");
+
             }
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
-        return valores;
 
     }
 }

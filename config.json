@@ -12,7 +12,7 @@
   },
   {
     "uuaa":"ktc1",
-    "entrada":"C:ruta_entrada_swd1.json",
+    "entrada":"C:ruta_entrada_ktc1.json",
     "salida":"C:ruta_salida_swd1",
     "releasekirby":"spark-global-libs-snapshot-local",
     "versionkirby":"0.0.1-SNAPSHOT",
@@ -23,7 +23,7 @@
   },
   {
     "uuaa":"ktc2",
-    "entrada":"C:ruta_entrada_swd1.json",
+    "entrada":"C:ruta_entrada_ktc2.json",
     "salida":"C:ruta_salida_swd1",
     "releasekirby":"spark-global-libs-snapshot-local",
     "versionkirby":"0.0.1-SNAPSHOT",
