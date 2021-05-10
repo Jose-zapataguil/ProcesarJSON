@@ -17,20 +17,20 @@ public class Main {
             FileInputStream in = new FileInputStream("./config.json");
             JSONTokener tokener = new JSONTokener(in);
             JSONArray jsonArray = new JSONArray(tokener);
-
+            String [] valores = new String[9];
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject object = jsonArray.getJSONObject(i);
-                String uuaa = object.getString("uuaa");
-                String rutaEntrada = object.getString("entrada");
-                String rutaSalida = object.getString("salida");
-                String releasekirby = object.getString("releasekirby");
-                String versionkirby = object.getString("versionkirby");
-                String artifactUrl = object.getString("artifactUrl");
-                String extraLibs = object.getString("extraLibs");
-                String releasehammurabi = object.getString("releasehammurabi");
-                String versionhammurabi = object.getString("versionhammurabi");
+                valores[0] = object.getString("uuaa");
+                valores[1] = object.getString("entrada");
+                valores[2] = object.getString("salida");
+                valores[3] = object.getString("releasekirby");
+                valores[4] = object.getString("versionkirby");
+                valores[5] = object.getString("artifactUrl");
+                valores[6] = object.getString("extraLibs");
+                valores[7] = object.getString("releasehammurabi");
+                valores[8] = object.getString("versionhammurabi");
 
-                ProcesarJSON pj = new ProcesarJSON(rutaEntrada, uuaa, rutaSalida,releasekirby,versionkirby,artifactUrl,extraLibs,releasehammurabi,versionhammurabi);
+                ProcesarJSON pj = new ProcesarJSON(valores);
                 pj.procesar();
                 System.out.println("Ficheros creados correctamente");
 

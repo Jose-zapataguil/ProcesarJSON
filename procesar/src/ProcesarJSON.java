@@ -14,18 +14,19 @@ public class ProcesarJSON {
     private String releasehammurabi;
     private String versionhammurabi;
 
-    ProcesarJSON(String rutaEntrada, String uuaa, String rutaSalida, String releasekirby, String versionkirby, String artifactUrl, String extraLibs, String releasehammurabi, String versionhammurabi) {
-        LeerJSON lj = new LeerJSON(rutaEntrada);
+    ProcesarJSON(String [] valores) {
+        LeerJSON lj = new LeerJSON(valores[1]);
         this.array = lj.obtenerElemento();
-        this.uuaa = uuaa;
-        this.rutaSalida = rutaSalida;
+        this.uuaa = valores[0];
+        this.rutaSalida = valores[2];
         this.gf = new GenerarFicheros(rutaSalida, uuaa);
-        this.releasekirby = releasekirby;
-        this.versionkirby = versionkirby;
-        this.artifactUrl = artifactUrl;
-        this.extraLibs = extraLibs;
-        this.releasehammurabi = releasehammurabi;
-        this.versionhammurabi = versionhammurabi;
+        this.releasekirby = valores[3];
+        this.versionkirby = valores[4];
+        this.artifactUrl = valores[5];
+        this.extraLibs = valores[6];
+        this.releasehammurabi = valores[7];
+        this.versionhammurabi = valores[8];
+
     }
 
     public void procesar() {
