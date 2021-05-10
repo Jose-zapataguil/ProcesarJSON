@@ -1,0 +1,2660 @@
+{
+	"data": {
+	  "simpleJobs": [
+		{
+		  "jobName": "kdit-es-spk-lazyevaluationproc-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.2.1",
+			"processing": "batch"
+		  },
+		  "description": "Dummy job to initialize secrets",
+		  "configuration": {
+			"size": "XS",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/ingproc/hackatonspark221/0.2.0/application.conf",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/ingproc/hackatonspark221/0.2.0/hackatonspark221-0.2.0-jar-with-dependencies.jar",
+			  "mainClass": "com.bbva.ingproc.ingproc.HackatonSpark221"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": null,
+		  "etherBotName": "ktc2-processing-bc13ae05@dataproc.ecs",
+		  "_id": "kdit-es-spk-lazyevaluationproc-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/kdit-es-spk-lazyevaluationproc-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "datio_support",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-01-21T10:07:01.227760Z",
+		  "_updatedAt": "2021-01-21T10:07:01.227761Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-employeeorgmasterldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the employee organization in master consolidated LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR109-SNAPSHOT/ktc2/masterL2/trckToMasterEmployee_organization_ldap.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/employeeorgmasterldap-01",
+		  "etherBotName": "ktc2-processing-9914093a@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-employeeorgmasterldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-employeeorgmasterldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T08:18:50.230Z",
+		  "_updatedAt": "2021-03-30T08:18:50.230Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-employeepositionmasterldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the employee position in master consolidated LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR109-SNAPSHOT/ktc2/masterL2/trckToMasterEmployee_position_ldap.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/employeepositionmasterldap-01",
+		  "etherBotName": "ktc2-processing-c61686a8@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-employeepositionmasterldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-employeepositionmasterldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T08:24:38.531Z",
+		  "_updatedAt": "2021-03-30T08:24:38.531Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-eeorganizationmaster-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest employee organization in master",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/trckToMasterEmployee_organization.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/eeorganizationmaster-01",
+		  "etherBotName": "ktc2-processing-a0153474@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-eeorganizationmaster-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-eeorganizationmaster-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE18517",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-09T21:19:35.385Z",
+		  "_updatedAt": "2021-04-30T09:33:50.168215Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-eeorganizationmastertrck-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest employee organization tracking in master",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/rawToMasterEmployee_organization_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/eeorganizationmastertrck-01",
+		  "etherBotName": "ktc2-processing-54170bcf@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-eeorganizationmastertrck-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-eeorganizationmastertrck-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE18517",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-09T21:20:05.315Z",
+		  "_updatedAt": "2021-04-29T10:14:17.250078Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-eeorganizationmastertrck-77",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the eeorganization in master trck ",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-SNAPSHOT/ktc2/masterL2/rawToMasterEmployee_organization_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/eeorganizationmastertrck-77",
+		  "etherBotName": "ktc2-processing-54170bcf@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-eeorganizationmastertrck-77",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-eeorganizationmastertrck-77",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE64130",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-04-06T14:40:43.519Z",
+		  "_updatedAt": "2021-04-06T14:40:43.519Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-employeeorgmastertrckldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the employee organization in master tracking LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/rawToMasterEmployee_organization_trck_ldap.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/employeeorgmastertrckldap-01",
+		  "etherBotName": "ktc2-processing-be171ee8@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-employeeorgmastertrckldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-employeeorgmastertrckldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T08:05:42.909Z",
+		  "_updatedAt": "2021-04-27T14:02:56.407333Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-employeepositionmaster-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the employee position in master consolid",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/trckToMasterEmployee_position.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/employeepositionmaster-01",
+		  "etherBotName": "ktc2-processing-96169fa2@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-employeepositionmaster-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-employeepositionmaster-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE53350",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-08T18:07:50.038Z",
+		  "_updatedAt": "2021-04-30T10:00:43.659286Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-employeepositionmastertrck-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the employee position in master tracking",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/rawToMasterEmployee_position_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/employeepositionmastertrck-01",
+		  "etherBotName": "ktc2-processing-4a185d01@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-employeepositionmastertrck-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-employeepositionmastertrck-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE53350",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-08T18:02:16.925Z",
+		  "_updatedAt": "2021-04-29T10:28:58.251239Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-employeepositionmastertrck-77",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the employeeposition in master trck ",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-SNAPSHOT/ktc2/masterL2/rawToMasterEmployee_position_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/employeepositionmastertrck-77",
+		  "etherBotName": "ktc2-processing-4a185d01@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-employeepositionmastertrck-77",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-employeepositionmastertrck-77",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE64130",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-04-06T14:40:50.253Z",
+		  "_updatedAt": "2021-04-06T14:40:50.253Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-employeeposmastertrckldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the employee position in master tracking LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/rawToMasterEmployee_position_trck_ldap.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/employeeposmastertrckldap-01",
+		  "etherBotName": "ktc2-processing-c817b3e8@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-employeeposmastertrckldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-employeeposmastertrckldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T08:22:06.709Z",
+		  "_updatedAt": "2021-04-27T14:08:06.438775Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-intentitiesmastertrckldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the internal entities in master tracking LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR109-SNAPSHOT/ktc2/masterL2/rawToMasterInternal_entities_trck_ldap.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/intentitiesmastertrckldap-01",
+		  "etherBotName": "ktc2-processing-c617bbe8@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-intentitiesmastertrckldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-intentitiesmastertrckldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T08:25:54.254Z",
+		  "_updatedAt": "2021-03-30T08:25:54.254Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-jobprofilemaster-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest job profile in master",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/trckToMasterJob_profile.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/jobprofilemaster-01",
+		  "etherBotName": "ktc2-processing-ed13a920@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-jobprofilemaster-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-jobprofilemaster-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE72487",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-02-24T12:55:13.665Z",
+		  "_updatedAt": "2021-04-30T09:59:13.457449Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-jobprofilemastertrck-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest job profile tracking in master",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/rawToMasterJob_profile_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/jobprofilemastertrck-01",
+		  "etherBotName": "ktc2-processing-a115b474@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-jobprofilemastertrck-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-jobprofilemastertrck-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE72487",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-02-24T12:54:30.207Z",
+		  "_updatedAt": "2021-04-29T13:42:07.988144Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-jobprofilemastertrck-77",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the jobprofile in master trck ",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-SNAPSHOT/ktc2/masterL2/rawToMasterJob_profile_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/jobprofilemastertrck-77",
+		  "etherBotName": "ktc2-processing-a115b474@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-jobprofilemastertrck-77",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-jobprofilemastertrck-77",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE64130",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-04-06T14:41:03.535Z",
+		  "_updatedAt": "2021-04-06T14:41:03.535Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-jobprofilemastertrckldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the job profile in master tracking LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR109-SNAPSHOT/ktc2/masterL2/rawToMasterJob_profile_trck_ldap.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/jobprofilemastertrckldap-01",
+		  "etherBotName": "ktc2-processing-421746cf@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-jobprofilemastertrckldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-jobprofilemastertrckldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T13:36:31.080Z",
+		  "_updatedAt": "2021-03-30T13:36:31.080Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-jobprofiletrckmasterl2-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest job profile tracking in master",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR58-SNAPSHOT/ktc2/masterL2/rawToMasterJob_profile_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0-SNAPSHOT/kirby-standalone-3.1.0-20210222.111450-11.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/0.1.0-SNAPSHOT/wdtransformations-0.1.0-20210203.083350-4.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/jobprofiletrckmasterl2-01",
+		  "etherBotName": "ktc2-processing-3f1608a1@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-jobprofiletrckmasterl2-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-jobprofiletrckmasterl2-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE72487",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-02-23T14:54:26.277Z",
+		  "_updatedAt": "2021-02-23T14:54:26.277Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-locationsmaste0rl2-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the location in master (consolidated)",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/trckToMasterLocation.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": null,
+		  "etherBotName": "ktc2-processing-5b14e448@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-locationsmaste0rl2-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-locationsmaste0rl2-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE64130",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-02-23T15:56:13.272672Z",
+		  "_updatedAt": "2021-04-30T09:18:58.407444Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-locationsmaster-90",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the location in master (consolidated)",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR59-SNAPSHOT/ktc2/masterL2/trckToMasterLocations.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0-SNAPSHOT/kirby-standalone-3.1.0-20210222.111450-11.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/0.1.0-SNAPSHOT/wdtransformations-0.1.0-20210203.083350-4.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/locationsmaster-90",
+		  "etherBotName": "ktc2-processing-8d13e50c@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-locationsmaster-90",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-locationsmaster-90",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "E055392",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-04-25T18:00:34.442Z",
+		  "_updatedAt": "2021-04-25T18:00:34.442Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-locationsmastertrck-77",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the locations in master trck ",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-SNAPSHOT/ktc2/masterL2/rawToMasterLocations_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/locationsmastertrck-77",
+		  "etherBotName": "ktc2-processing-4115705f@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-locationsmastertrck-77",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-locationsmastertrck-77",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE64130",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-04-06T14:41:09.913Z",
+		  "_updatedAt": "2021-04-06T14:41:09.913Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-locationsmastertrck-90",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the locations in master trck ",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-SNAPSHOT/ktc2/masterL2/rawToMasterLocations_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/1.2.0/wdtransformations-1.2.0.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/locationsmastertrck-90",
+		  "etherBotName": "ktc2-processing-4115705f@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-locationsmastertrck-90",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-locationsmastertrck-90",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "E055392",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-04-25T18:00:36.343Z",
+		  "_updatedAt": "2021-04-25T18:00:36.343Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-locationsmastertrckldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the locations in master tracking LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR109-SNAPSHOT/ktc2/masterL2/rawToMasterLocations_trck_ldap.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/locationsmastertrckldap-01",
+		  "etherBotName": "ktc2-processing-e21682b8@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-locationsmastertrckldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-locationsmastertrckldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T08:32:31.971Z",
+		  "_updatedAt": "2021-03-30T08:32:31.971Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-locationstrckmasterl2-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the location in master (tracking) ",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/rawToMasterLocation_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": null,
+		  "etherBotName": "ktc2-processing-df15048b@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-locationstrckmasterl2-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-locationstrckmasterl2-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE64130",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-02-23T14:33:27.152504Z",
+		  "_updatedAt": "2021-04-30T08:19:56.582780Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-positionmaster-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the position in master",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/trckToMasterPosition.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": null,
+		  "etherBotName": "ktc2-processing-361373fa@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-positionmaster-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-positionmaster-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE84157",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-15T09:46:46.982477Z",
+		  "_updatedAt": "2021-04-30T09:25:29.116024Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-positionmastertrck-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the position in master tracking ",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/rawToMasterPosition_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": null,
+		  "etherBotName": "ktc2-processing-ea14b14b@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-positionmastertrck-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-positionmastertrck-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE84157",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-15T09:46:29.826806Z",
+		  "_updatedAt": "2021-04-29T13:49:47.073699Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-positionmastertrck-77",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the position in master trck ",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-SNAPSHOT/ktc2/masterL2/rawToMasterPosition_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/positionmastertrck-77",
+		  "etherBotName": "ktc2-processing-ea14b14b@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-positionmastertrck-77",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-positionmastertrck-77",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE64130",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-04-06T14:41:16.542Z",
+		  "_updatedAt": "2021-04-06T14:41:16.542Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-positionmastertrckldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the position in master tracking LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR109-SNAPSHOT/ktc2/masterL2/rawToMasterPosition_trck_ldap.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/positionmastertrckldap-01",
+		  "etherBotName": "ktc2-processing-8b1667a3@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-positionmastertrckldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-positionmastertrckldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T08:31:40.381Z",
+		  "_updatedAt": "2021-03-30T08:31:40.381Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-profilingmaster-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest profiling in master",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/trckToMasterProfiling.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/profilingmaster-01",
+		  "etherBotName": "ktc2-processing-8b133e0d@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-profilingmaster-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-profilingmaster-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE72487",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-12T12:23:41.743Z",
+		  "_updatedAt": "2021-04-30T09:28:06.612827Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-profilingmastertrck-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest profiling tracking in master",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/rawToMasterProfiling_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/profilingmastertrck-01",
+		  "etherBotName": "ktc2-processing-3f15c15f@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-profilingmastertrck-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-profilingmastertrck-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE72487",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-12T12:24:26.750Z",
+		  "_updatedAt": "2021-04-30T06:22:59.734877Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-profilingmastertrck-77",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the profiling in master trck ",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-SNAPSHOT/ktc2/masterL2/rawToMasterProfiling_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/profilingmastertrck-77",
+		  "etherBotName": "ktc2-processing-3f15c15f@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-profilingmastertrck-77",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-profilingmastertrck-77",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE64130",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-04-06T14:41:24.089Z",
+		  "_updatedAt": "2021-04-06T14:41:24.089Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-profilingmastertrckldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the profiling in master tracking LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR109-SNAPSHOT/ktc2/masterL2/rawToMasterProfiling_trck_ldap.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/profilingmastertrckldap-01",
+		  "etherBotName": "ktc2-processing-e016cbb8@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-profilingmastertrckldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-profilingmastertrckldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T08:30:08.251Z",
+		  "_updatedAt": "2021-03-30T08:30:08.251Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-provincestatemaster-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the province/state in master consolidated",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-SNAPSHOT/ktc2/masterL2/trckToMasterProvince.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/provincestatemaster-01",
+		  "etherBotName": "ktc2-processing-48157460@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-provincestatemaster-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-provincestatemaster-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE83124",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-02T11:47:30.078Z",
+		  "_updatedAt": "2021-03-16T10:02:59.411821Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-provincestatemastertrck-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the province/state in master tracking",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR104-SNAPSHOT/ktc2/masterL2/rawToMasterProvince_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/provincestatemastertrck-01",
+		  "etherBotName": "ktc2-processing-fc16ebb9@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-provincestatemastertrck-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-provincestatemastertrck-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE83124",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-02T10:17:00.327Z",
+		  "_updatedAt": "2021-03-24T12:46:54.672385Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-supervisorymaster-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the supervisory in master",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/trckToMasterSupervisory.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/supervisorymaster-01",
+		  "etherBotName": "ktc2-processing-9c14e637@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-supervisorymaster-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-supervisorymaster-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE84157",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-02-25T11:26:07.289Z",
+		  "_updatedAt": "2021-04-30T09:32:32.264381Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-supervisorymastertrck-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the supervisory in master tracking ",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/rawToMasterSupervisory_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/supervisorymastertrck-01",
+		  "etherBotName": "ktc2-processing-5016ad8e@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-supervisorymastertrck-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-supervisorymastertrck-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE84157",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-02-25T11:22:59.872Z",
+		  "_updatedAt": "2021-04-30T06:43:33.070149Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-supervisorymastertrck-77",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the supervisory in master trck ",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-SNAPSHOT/ktc2/masterL2/rawToMasterSupervisory_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/supervisorymastertrck-77",
+		  "etherBotName": "ktc2-processing-5016ad8e@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-supervisorymastertrck-77",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-supervisorymastertrck-77",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE64130",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-04-06T14:41:31.512Z",
+		  "_updatedAt": "2021-04-06T14:41:31.512Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inm-supervisorymastertrckldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the supervisory in master tracking LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/rawToMasterSupervisory_trck_ldap.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/supervisorymastertrckldap-01",
+		  "etherBotName": "ktc2-processing-f117fbeb@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inm-supervisorymastertrckldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inm-supervisorymastertrckldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T08:27:09.647Z",
+		  "_updatedAt": "2021-04-27T14:43:44.355504Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inr-internalentitiesmaster-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the internal entities in master ",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/trckToMasterInternal_entities.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/internalentitiesmaster-01",
+		  "etherBotName": "ktc2-processing-88162ba2@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inr-internalentitiesmaster-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inr-internalentitiesmaster-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE40232",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-02-24T12:36:27.781Z",
+		  "_updatedAt": "2021-04-30T09:38:35.719499Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inr-internalentitiesmastertrck-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the internal entities tracking in master ",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR123-SNAPSHOT/ktc2/masterL2/rawToMasterInternal_entities_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/internalentitiesmastertrck-01",
+		  "etherBotName": "ktc2-processing-3c18b100@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inr-internalentitiesmastertrck-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inr-internalentitiesmastertrck-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE40232",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-02-24T11:53:44.163620Z",
+		  "_updatedAt": "2021-04-29T10:44:27.638238Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-inr-internalentitiesmastertrck-77",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the internalentities in master trck ",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-SNAPSHOT/ktc2/masterL2/rawToMasterInternal_entities_trck.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/internalentitiesmastertrck-77",
+		  "etherBotName": "ktc2-processing-3c18b100@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-inr-internalentitiesmastertrck-77",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-inr-internalentitiesmastertrck-77",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE64130",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-04-06T14:40:57.512Z",
+		  "_updatedAt": "2021-04-06T14:40:57.512Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-internalentitiesmasterldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the internal entities in master consolidated LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR109-SNAPSHOT/ktc2/masterL2/trckToMasterInternal_entities_ldap.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/internalentitiesmasterldap-01",
+		  "etherBotName": "ktc2-processing-b3164ea7@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-internalentitiesmasterldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-internalentitiesmasterldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T08:26:37.032Z",
+		  "_updatedAt": "2021-03-30T08:26:37.032Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-jobprofilemasterldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the job profile in master consolidated LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR109-SNAPSHOT/ktc2/masterL2/trckToMasterJob_profile_ldap.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/jobprofilemasterldap-01",
+		  "etherBotName": "ktc2-processing-1d149224@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-jobprofilemasterldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-jobprofilemasterldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T13:37:06.689Z",
+		  "_updatedAt": "2021-03-30T13:37:06.689Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-locationsmasterldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the locations in master consolidated LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR109-SNAPSHOT/ktc2/masterL2/trckToMasterLocations_ldap.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/locationsmasterldap-01",
+		  "etherBotName": "ktc2-processing-bd13bf10@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-locationsmasterldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-locationsmasterldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T08:32:56.842Z",
+		  "_updatedAt": "2021-03-30T08:32:56.842Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-positionsmasterldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the position in master consolidated LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR109-SNAPSHOT/ktc2/masterL2/trckToMasterPosition_ldap.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/positionsmasterldap-01",
+		  "etherBotName": "ktc2-processing-d9139b12@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-positionsmasterldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-positionsmasterldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T08:32:06.718Z",
+		  "_updatedAt": "2021-03-30T08:32:06.718Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-profilingmasterldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the profiling in master consolidated LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR109-SNAPSHOT/ktc2/masterL2/trckToMasterProfiling_ldap.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/profilingmasterldap-01",
+		  "etherBotName": "ktc2-processing-bb131011@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-profilingmasterldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-profilingmasterldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T08:30:35.902Z",
+		  "_updatedAt": "2021-03-30T08:30:35.902Z"
+		},
+		{
+		  "jobName": "ktc2-gl-krb-supervisorymasterldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to ingest the supervisory in master consolidated LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR109-SNAPSHOT/ktc2/masterL2/trckToMasterSupervisory_ldap.conf",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.datio.dataproc.kirby.standalone.KirbyLauncher",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.1.0/kirby-standalone-3.1.0.jar",
+			  "extraLibs": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/bbva/gdh/wdtransformations/0.1.0/wdtransformations-0.1.0.jar",
+			  "sparkConfig": {
+				"spark.sql.sources.partitionOverwriteMode": "dynamic"
+			  }
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/supervisorymasterldap-01",
+		  "etherBotName": "ktc2-processing-cc141a3d@dataproc.ecs",
+		  "_id": "ktc2-gl-krb-supervisorymasterldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-krb-supervisorymasterldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T08:28:36.862Z",
+		  "_updatedAt": "2021-03-30T08:28:36.862Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-jobcomparator-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "spark",
+			"version": "2.4.3",
+			"processing": "batch"
+		  },
+		  "description": "Proccess to compare two dataframes",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-ingest/0.0.1-PR114-SNAPSHOT/comp/jobComparator.conf",
+			  "artifactUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/spark-comparator-job/0.1.0-PR1-SNAPSHOT/spark-comparator-job-0.1.0-PR1-20210317.172457-9-jar-with-dependencies.jar",
+			  "repoSecurity": "artifactory",
+			  "sparkHistoryEnabled": "true",
+			  "mainClass": "com.bbva.gdh.comparator.ComparatorJobMain"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": null,
+		  "etherBotName": "ktc2-processing-4611f0a0@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-jobcomparator-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-jobcomparator-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE64130",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-04-09T08:44:07.551349Z",
+		  "_updatedAt": "2021-04-09T08:44:07.551349Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-eeorganizationmaster-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a job to run Hammurabi validations on master employee organization",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR80-SNAPSHOT/ktc2/masterL2/employee_organizationMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/eeorganizationmaster-01",
+		  "etherBotName": "ktc2-processing-bc15f476@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-eeorganizationmaster-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-eeorganizationmaster-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE18517",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-09T21:20:59.909Z",
+		  "_updatedAt": "2021-04-30T10:06:43.602690Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-eeorganizationmastertrck-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a job to run Hammurabi validations on master employee organization (tracking)",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR80-SNAPSHOT/ktc2/masterL2/employee_organization_trckMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/eeorganizationmastertrck-01",
+		  "etherBotName": "ktc2-processing-70173bd2@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-eeorganizationmastertrck-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-eeorganizationmastertrck-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE18517",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-09T21:21:29.782Z",
+		  "_updatedAt": "2021-04-30T08:51:02.453095Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-employeeorgmasterldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master employee organization LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR70-SNAPSHOT/ktc2/masterL2/employee_organizationMasterQa_ldap.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/employeeorgmasterldap-01",
+		  "etherBotName": "ktc2-processing-26162f8e@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-employeeorgmasterldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-employeeorgmasterldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T13:39:55.344Z",
+		  "_updatedAt": "2021-03-30T13:39:55.344Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-employeeorgmastertrckldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on tracking employee organization LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR70-SNAPSHOT/ktc2/masterL2/employee_organization_trckMasterQa_ldap.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/employeeorgmastertrckldap-01",
+		  "etherBotName": "ktc2-processing-da176aeb@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-employeeorgmastertrckldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-employeeorgmastertrckldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T13:38:52.254Z",
+		  "_updatedAt": "2021-03-30T13:38:52.254Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-employeepositionmaster-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master worker position consolidada",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR80-SNAPSHOT/ktc2/masterL2/employee_position_MasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/employeepositionmaster-01",
+		  "etherBotName": "ktc2-processing-b21697a5@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-employeepositionmaster-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-employeepositionmaster-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE53350",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-09T08:21:57.591Z",
+		  "_updatedAt": "2021-04-30T10:08:55.840676Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-employeepositionmasterldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master employee position LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR70-SNAPSHOT/ktc2/masterL2/employee_position_MasterQa_ldap.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/employeepositionmasterldap-01",
+		  "etherBotName": "ktc2-processing-53187c04@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-employeepositionmasterldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-employeepositionmasterldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T13:42:13.746Z",
+		  "_updatedAt": "2021-03-30T13:42:13.746Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-employeepositionmastertrck-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master worker position tracking",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR80-SNAPSHOT/ktc2/masterL2/employee_position_trckMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/employeepositionmastertrck-01",
+		  "etherBotName": "ktc2-processing-6618c504@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-employeepositionmastertrck-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-employeepositionmastertrck-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE53350",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-09T08:19:57.841Z",
+		  "_updatedAt": "2021-04-30T08:55:05.677118Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-employeeposmastertrckldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on tracking employee position LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR70-SNAPSHOT/ktc2/masterL2/employee_position_trckMasterQa_ldap.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/employeeposmastertrckldap-01",
+		  "etherBotName": "ktc2-processing-e417ffeb@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-employeeposmastertrckldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-employeeposmastertrckldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T13:41:07.702Z",
+		  "_updatedAt": "2021-03-30T13:41:07.702Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-intentitiesmastertrckldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on tracking internal entities LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR70-SNAPSHOT/ktc2/masterL2/internal_entities_trckMasterQa_ldap.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/intentitiesmastertrckldap-01",
+		  "etherBotName": "ktc2-processing-e21707ec@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-intentitiesmastertrckldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-intentitiesmastertrckldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T13:42:38.561Z",
+		  "_updatedAt": "2021-03-30T13:42:38.561Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-internalentitiesmaster-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on internal entities tracking ",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR80-SNAPSHOT/ktc2/masterL2/internal_entitiesMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/internalentitiesmaster-01",
+		  "etherBotName": "ktc2-processing-9f16aba4@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-internalentitiesmaster-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-internalentitiesmaster-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE40232",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-02-24T15:31:38.280Z",
+		  "_updatedAt": "2021-04-30T10:06:42.855259Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-internalentitiesmasterldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master internal entities LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR70-SNAPSHOT/ktc2/masterL2/internal_entitiesMasterQa_ldap.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/internalentitiesmasterldap-01",
+		  "etherBotName": "ktc2-processing-40184403@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-internalentitiesmasterldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-internalentitiesmasterldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T13:43:05.377Z",
+		  "_updatedAt": "2021-03-30T13:43:05.377Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-internalentitiesmastertrck-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on internal entities tracking ",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR80-SNAPSHOT/ktc2/masterL2/internal_entities_trckMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/internalentitiesmastertrck-01",
+		  "etherBotName": "ktc2-processing-53188d03@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-internalentitiesmastertrck-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-internalentitiesmastertrck-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE40232",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-02-24T15:31:06.282Z",
+		  "_updatedAt": "2021-04-30T09:03:14.761379Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-jobprofilemaster-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master job profile",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR80-SNAPSHOT/ktc2/masterL2/job_profileMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/jobprofilemaster-01",
+		  "etherBotName": "ktc2-processing-0914f922@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-jobprofilemaster-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-jobprofilemaster-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE72487",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-02-24T13:03:55.701Z",
+		  "_updatedAt": "2021-04-30T10:04:51.569856Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-jobprofilemasterldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master job profile LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR70-SNAPSHOT/ktc2/masterL2/job_profileMasterQa_ldap.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/jobprofilemasterldap-01",
+		  "etherBotName": "ktc2-processing-aa152b77@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-jobprofilemasterldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-jobprofilemasterldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T13:49:06.287Z",
+		  "_updatedAt": "2021-03-30T13:49:06.287Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-jobprofilemastertrck-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master job profile (tracking)",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR80-SNAPSHOT/ktc2/masterL2/job_profile_trckMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/jobprofilemastertrck-01",
+		  "etherBotName": "ktc2-processing-bd157477@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-jobprofilemastertrck-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-jobprofilemastertrck-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE72487",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-02-24T13:00:59.430Z",
+		  "_updatedAt": "2021-04-30T09:06:50.756630Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-jobprofilemastertrckldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on tracking job profile LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR70-SNAPSHOT/ktc2/masterL2/job_profile_trckMasterQa_ldap.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/jobprofilemastertrckldap-01",
+		  "etherBotName": "ktc2-processing-5e1776d2@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-jobprofilemastertrckldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-jobprofilemastertrckldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T13:48:42.403Z",
+		  "_updatedAt": "2021-03-30T13:48:42.403Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-locationsmaster-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master locations (tracking)",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR80-SNAPSHOT/ktc2/masterL2/locationMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": null,
+		  "etherBotName": "ktc2-processing-a913190f@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-locationsmaster-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-locationsmaster-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE64130",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-02-23T16:38:14.421411Z",
+		  "_updatedAt": "2021-04-30T09:39:21.343261Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-locationsmaster-90",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master locations",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-SNAPSHOT/ktc2/masterL2/locationsMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/locationsmaster-90",
+		  "etherBotName": "ktc2-processing-a913190f@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-locationsmaster-90",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-locationsmaster-90",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "E055392",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-04-25T18:00:37.993Z",
+		  "_updatedAt": "2021-04-25T18:00:37.993Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-locationsmasterldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master locations LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR70-SNAPSHOT/ktc2/masterL2/location_MasterQa_ldap.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/locationsmasterldap-01",
+		  "etherBotName": "ktc2-processing-4a15cb61@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-locationsmasterldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-locationsmasterldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T13:44:31.678Z",
+		  "_updatedAt": "2021-04-06T15:40:59.416301Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-locationsmastertrckldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on tracking locations LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR70-SNAPSHOT/ktc2/masterL2/location_trckMasterQa_ldap.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/locationsmastertrckldap-01",
+		  "etherBotName": "ktc2-processing-fe1696bb@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-locationsmastertrckldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-locationsmastertrckldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T13:44:07.095Z",
+		  "_updatedAt": "2021-04-06T15:21:27.334996Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-locationstrckmaster-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master locations (tracking)",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR80-SNAPSHOT/ktc2/masterL2/location_trckMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": null,
+		  "etherBotName": "ktc2-processing-5d151c62@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-locationstrckmaster-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-locationstrckmaster-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE64130",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-02-23T16:36:48.602279Z",
+		  "_updatedAt": "2021-04-30T08:55:19.418933Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-locationstrckmaster-90",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master locations (tracking)",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR28-SNAPSHOT/ktc2/masterL2/locations_trckMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/locationstrckmaster-90",
+		  "etherBotName": "ktc2-processing-5d151c62@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-locationstrckmaster-90",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-locationstrckmaster-90",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "E055392",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-04-25T18:00:39.380Z",
+		  "_updatedAt": "2021-04-25T18:00:39.380Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-positionmaster-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a job to run Hammurabi validations on master position entity",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR80-SNAPSHOT/ktc2/masterL2/positionMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": null,
+		  "etherBotName": "ktc2-processing-52138bfc@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-positionmaster-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-positionmaster-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE84157",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-15T10:01:38.070244Z",
+		  "_updatedAt": "2021-04-30T09:43:44.146093Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-positionmasterldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master position LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR70-SNAPSHOT/ktc2/masterL2/positionMasterQa_ldap.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/positionmasterldap-01",
+		  "etherBotName": "ktc2-processing-f314f04d@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-positionmasterldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-positionmasterldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T13:45:35.955Z",
+		  "_updatedAt": "2021-03-30T13:45:35.955Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-positionmastertrck-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a job to run Hammurabi validations on master traking position entity",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR80-SNAPSHOT/ktc2/masterL2/position_trckMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": null,
+		  "etherBotName": "ktc2-processing-0615394e@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-positionmastertrck-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-positionmastertrck-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE84157",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-15T10:01:11.857046Z",
+		  "_updatedAt": "2021-04-30T08:59:14.024623Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-positionmastertrckldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on tracking position LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR70-SNAPSHOT/ktc2/masterL2/position_trckMasterQa_ldap.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/positionmastertrckldap-01",
+		  "etherBotName": "ktc2-processing-a7165fa6@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-positionmastertrckldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-positionmastertrckldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T13:44:56.487Z",
+		  "_updatedAt": "2021-03-30T13:44:56.487Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-profilingmaster-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master profiling",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR80-SNAPSHOT/ktc2/masterL2/profilingMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/profilingmaster-01",
+		  "etherBotName": "ktc2-processing-a713720f@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-profilingmaster-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-profilingmaster-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE72487",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-12T12:20:53.717Z",
+		  "_updatedAt": "2021-04-30T09:49:10.941594Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-profilingmasterldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master profiling LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR70-SNAPSHOT/ktc2/masterL2/profilingMasterQa_ldap.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/profilingmasterldap-01",
+		  "etherBotName": "ktc2-processing-48151c62@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-profilingmasterldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-profilingmasterldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T13:46:29.397Z",
+		  "_updatedAt": "2021-03-30T13:46:29.397Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-profilingmastertrck-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master profiling (tracking)",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR80-SNAPSHOT/ktc2/masterL2/profiling_trckMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/profilingmastertrck-01",
+		  "etherBotName": "ktc2-processing-5b156562@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-profilingmastertrck-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-profilingmastertrck-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE72487",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-12T12:21:38.440Z",
+		  "_updatedAt": "2021-04-30T09:13:01.495561Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-profilingmastertrckldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on tracking profiling LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR70-SNAPSHOT/ktc2/masterL2/profiling_trckMasterQa_ldap.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/profilingmastertrckldap-01",
+		  "etherBotName": "ktc2-processing-fc16dfbb@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-profilingmastertrckldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-profilingmastertrckldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T13:46:03.009Z",
+		  "_updatedAt": "2021-03-30T13:46:03.009Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-provincestatemaster-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master province/state consolidated",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR34-SNAPSHOT/ktc2/masterL2/provinceMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/provincestatemaster-01",
+		  "etherBotName": "ktc2-processing-64151863@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-provincestatemaster-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-provincestatemaster-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE83124",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-02T11:47:56.698Z",
+		  "_updatedAt": "2021-03-02T11:47:56.698Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-provincestatemastertrck-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master province/state tracking",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR34-SNAPSHOT/ktc2/masterL2/province_trckMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/provincestatemastertrck-01",
+		  "etherBotName": "ktc2-processing-1817ffbc@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-provincestatemastertrck-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-provincestatemastertrck-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE83124",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-02T10:23:54.586Z",
+		  "_updatedAt": "2021-03-02T10:23:54.586Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-supervisorymaster-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a job to run Hammurabi validations on master supervisory entity",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR80-SNAPSHOT/ktc2/masterL2/supervisoryMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/supervisorymaster-01",
+		  "etherBotName": "ktc2-processing-b814523a@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-supervisorymaster-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-supervisorymaster-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE84157",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-02-25T11:35:12.050Z",
+		  "_updatedAt": "2021-04-30T09:53:24.132883Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-supervisorymasterldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on master supervisory LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR70-SNAPSHOT/ktc2/masterL2/supervisoryMasterQa_ldap.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/supervisorymasterldap-01",
+		  "etherBotName": "ktc2-processing-59164091@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-supervisorymasterldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-supervisorymasterldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T13:48:12.254Z",
+		  "_updatedAt": "2021-03-30T13:48:12.254Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-supervisorymastertrck-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a job to run Hammurabi validations on master traking supervisory entity",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR80-SNAPSHOT/ktc2/masterL2/supervisory_trckMasterQa.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/supervisorymastertrck-01",
+		  "etherBotName": "ktc2-processing-6c168991@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-supervisorymastertrck-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-supervisorymastertrck-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE84157",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-02-25T11:38:25.721Z",
+		  "_updatedAt": "2021-04-30T09:14:18.061976Z"
+		},
+		{
+		  "jobName": "ktc2-gl-spk-qlt-supervisorymastertrckldap-01",
+		  "jobVersion": "1.0",
+		  "runtime": {
+			"id": "hammurabi",
+			"version": "",
+			"processing": "batch"
+		  },
+		  "description": "this is a production job to run Hammurabi validations on tracking supervisory LDAP",
+		  "configuration": {
+			"size": "S",
+			"params": {
+			  "configUrl": "https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wd-dq/0.0.1-PR70-SNAPSHOT/ktc2/masterL2/supervisory_trckMasterQa_ldap.conf",
+			  "sparkHistoryEnabled": "true"
+			}
+		  },
+		  "priority": "MEDIUM",
+		  "mr": "//mr.work-01/ns/gl.ktc2.app-id-66858.dev/mrs/supervisorymastertrckldap-01",
+		  "etherBotName": "ktc2-processing-0d1847ef@dataproc.ecs",
+		  "_id": "ktc2-gl-spk-qlt-supervisorymastertrckldap-01",
+		  "_locator": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs/ktc2-gl-spk-qlt-supervisorymastertrckldap-01",
+		  "_parent": "//dataproc.work-01/ns/gl.ktc2.app-id-66858.dev/groups/processing/jobs",
+		  "_createdBy": "XE92457",
+		  "_updatedBy": null,
+		  "_type": "dataproc.job",
+		  "_ac": true,
+		  "_createdAt": "2021-03-30T13:47:37.958Z",
+		  "_updatedAt": "2021-03-30T13:47:37.958Z"
+		}
+	  ]
+	}
+  }

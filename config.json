@@ -1,8 +1,8 @@
 [
   {
     "uuaa":"swd1",
-    "entrada":"C:ruta_entrada_swd1.json",
-    "salida":"C:ruta_salida_swd1",
+    "entrada":"C:\\Users\\psancdem\\Documents\\Proyectos\\ProcesarJSON\\ficheros\\gl.swd1.app-id-17304.dev.json",
+    "salida":"C:\\Users\\psancdem\\Documents\\Proyectos\\ProcesarJSON\\salida",
     "releasekirby":"spark-global-libs-snapshot-local",
     "versionkirby":"0.0.1-SNAPSHOT",
     "artifactUrl":"https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
@@ -12,8 +12,8 @@
   },
   {
     "uuaa":"ktc1",
-    "entrada":"C:ruta_entrada_ktc1.json",
-    "salida":"C:ruta_salida_swd1",
+    "entrada":"C:\\Users\\psancdem\\Documents\\Proyectos\\ProcesarJSON\\ficheros\\gl.ktc1.app-id-33374.dev.json",
+    "salida":"C:\\Users\\psancdem\\Documents\\Proyectos\\ProcesarJSON\\salida",
     "releasekirby":"spark-global-libs-snapshot-local",
     "versionkirby":"0.0.1-SNAPSHOT",
     "artifactUrl":"https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
@@ -23,8 +23,8 @@
   },
   {
     "uuaa":"ktc2",
-    "entrada":"C:ruta_entrada_ktc2.json",
-    "salida":"C:ruta_salida_swd1",
+    "entrada":"C:\\Users\\psancdem\\Documents\\Proyectos\\ProcesarJSON\\ficheros\\gl.ktc2.app-id-66858.dev.json",
+    "salida":"C:\\Users\\psancdem\\Documents\\Proyectos\\ProcesarJSON\\salida",
     "releasekirby":"spark-global-libs-snapshot-local",
     "versionkirby":"0.0.1-SNAPSHOT",
     "artifactUrl":"https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
@@ -34,8 +34,8 @@
   },
   {
     "uuaa":"ktc3",
-    "entrada":"C:ruta_entrada_swd1.json",
-    "salida":"C:ruta_salida_swd1",
+    "entrada":"C:\\Users\\psancdem\\Documents\\Proyectos\\ProcesarJSON\\ficheros\\gl.ktc3.app-id-66868.dev.json",
+    "salida":"C:\\Users\\psancdem\\Documents\\Proyectos\\ProcesarJSON\\salida",
     "releasekirby":"spark-global-libs-snapshot-local",
     "versionkirby":"0.0.1-SNAPSHOT",
     "artifactUrl":"https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
@@ -45,8 +45,8 @@
   },
   {
     "uuaa":"ktc4",
-    "entrada":"C:ruta_entrada_swd1.json",
-    "salida":"C:ruta_salida_swd1",
+    "entrada":"C:\\Users\\psancdem\\Documents\\Proyectos\\ProcesarJSON\\ficheros\\gl.ktc4.app-id-66904.dev.json",
+    "salida":"C:\\Users\\psancdem\\Documents\\Proyectos\\ProcesarJSON\\salida",
     "releasekirby":"spark-global-libs-snapshot-local",
     "versionkirby":"0.0.1-SNAPSHOT",
     "artifactUrl":"https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",

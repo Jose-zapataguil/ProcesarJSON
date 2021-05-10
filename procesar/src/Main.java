@@ -14,14 +14,6 @@ public class Main {
 
     }
 
-    public static String rutaConfig(String oldRuta, String version, String uuaa) {
-        String release = "spark-global-libs-release-local";
-        int index1 = oldRuta.lastIndexOf("/", oldRuta.indexOf("/" + uuaa) - 1) + 1;
-        String newRuta = oldRuta.substring(0, oldRuta.indexOf("artifactory/") + 12);
-        int index2 = oldRuta.indexOf("/", (oldRuta.indexOf("/artifactory/") + 12) + 1);
-        newRuta += release + oldRuta.substring(index2, index1) + version + "/" + oldRuta.substring(oldRuta.indexOf(uuaa));
-        return newRuta;
-    }
 
     public static void iniConfig() {
         try {
