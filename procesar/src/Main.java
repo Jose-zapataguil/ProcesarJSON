@@ -6,7 +6,10 @@ import java.io.*;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) throws Exception {
+        iniConfig();
+        /*
         Scanner sc = new Scanner(System.in);
         String rutaEntrada;
         String rutaSalida;
@@ -166,6 +169,8 @@ public class Main {
             e.printStackTrace();
         }
         System.out.println("Ficheros creados correctamente");
+        */
+
     }
 
     public static String rutaConfig(String oldRuta, String version, String uuaa) {
@@ -175,5 +180,28 @@ public class Main {
         int index2 = oldRuta.indexOf("/", (oldRuta.indexOf("/artifactory/") + 12) + 1);
         newRuta += release + oldRuta.substring(index2, index1) + version + "/" + oldRuta.substring(oldRuta.indexOf(uuaa));
         return newRuta;
+    }
+
+    public static String[] iniConfig() {
+        String[] valores = new String[6];
+        try {
+            FileInputStream in = new FileInputStream("./config.json");
+
+            JSONTokener tokener = new JSONTokener(in);
+            JSONArray jsonArray = new JSONArray(tokener);
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject object = jsonArray.getJSONObject(i);
+                String uuaa = object.getString("uuaa");
+                System.out.println(uuaa);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        return valores;
+
     }
 }

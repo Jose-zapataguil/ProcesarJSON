@@ -8,6 +8,50 @@
     "artifactUrl":"https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
     "extraLibs":"https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar",
     "releasehammurabi":"spark-global-libs-snapshot-local",
-    "versionhammurabi":"0.0.1-SNAPSHOT",
+    "versionhammurabi":"0.0.1-SNAPSHOT"
+  },
+  {
+    "uuaa":"ktc1",
+    "entrada":"C:ruta_entrada_swd1.json",
+    "salida":"C:ruta_salida_swd1",
+    "releasekirby":"spark-global-libs-snapshot-local",
+    "versionkirby":"0.0.1-SNAPSHOT",
+    "artifactUrl":"https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+    "extraLibs":"https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar",
+    "releasehammurabi":"spark-global-libs-snapshot-local",
+    "versionhammurabi":"0.0.1-SNAPSHOT"
+  },
+  {
+    "uuaa":"ktc2",
+    "entrada":"C:ruta_entrada_swd1.json",
+    "salida":"C:ruta_salida_swd1",
+    "releasekirby":"spark-global-libs-snapshot-local",
+    "versionkirby":"0.0.1-SNAPSHOT",
+    "artifactUrl":"https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+    "extraLibs":"https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar",
+    "releasehammurabi":"spark-global-libs-snapshot-local",
+    "versionhammurabi":"0.0.1-SNAPSHOT"
+  },
+  {
+    "uuaa":"ktc3",
+    "entrada":"C:ruta_entrada_swd1.json",
+    "salida":"C:ruta_salida_swd1",
+    "releasekirby":"spark-global-libs-snapshot-local",
+    "versionkirby":"0.0.1-SNAPSHOT",
+    "artifactUrl":"https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+    "extraLibs":"https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar",
+    "releasehammurabi":"spark-global-libs-snapshot-local",
+    "versionhammurabi":"0.0.1-SNAPSHOT"
+  },
+  {
+    "uuaa":"ktc4",
+    "entrada":"C:ruta_entrada_swd1.json",
+    "salida":"C:ruta_salida_swd1",
+    "releasekirby":"spark-global-libs-snapshot-local",
+    "versionkirby":"0.0.1-SNAPSHOT",
+    "artifactUrl":"https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-release-local/com/datio/dataproc/kirby/kirby-standalone/3.2.0/kirby-standalone-3.2.0.jar",
+    "extraLibs":"https://artifactory-estigia.live.es.ether.igrupobbva/artifactory/spark-global-libs-snapshot-local/com/bbva/gdh/wdtransformations/1.2.0-SNAPSHOT/wdtransformations-1.2.0-20210421.065520-2.jar",
+    "releasehammurabi":"spark-global-libs-snapshot-local",
+    "versionhammurabi":"0.0.1-SNAPSHOT"
   }
 ]
