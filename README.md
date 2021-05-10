@@ -52,11 +52,12 @@ Tambien existen jobs que no se procesan, que son los que no cuentan con uuaa en 
    ![image](https://user-images.githubusercontent.com/81249604/117668561-585b5480-b1a6-11eb-8a31-8999a3c31c65.png)
 
    
-   Y comprobamos la ruta de salida para verificar que todos los ficheros se han creado correctamente.
+   Y comprobamos la ruta de salida para verificar que todos los ficheros se han creado correctamente. 
    
-   ![image](https://user-images.githubusercontent.com/81249604/117668705-7d4fc780-b1a6-11eb-820a-36aa6b707726.png)
+   ![image](https://user-images.githubusercontent.com/81249604/117668860-9eb0b380-b1a6-11eb-8553-b3afe7998d7b.png)
 
 
+Nos deberá crear una estructura de directorios parecida a esta.
 
   
   ![image](https://user-images.githubusercontent.com/81249604/117668737-83de3f00-b1a6-11eb-8031-04cb9f94dba7.png)
