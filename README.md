@@ -23,21 +23,20 @@ Tambien existen jobs que no se procesan, que son los que no cuentan con uuaa en 
 
   
   
-  Aunque la información variará dependiendo del tipo de job que procesemos (kirby, hammurabi...). Siempre se asemejarán al siguiente formato.
-  
   ### Formas de Ejecución
   
  Tenemos dos maneras de ejecutar el programa:
  
   ###### IntelliJ
   
-  Para ejecutarlo desde IntelliJ debemos descargarnos el proyecto desde el repositorio de github (https://github.com/Jose-zapataguil/ProcesarJSON) y abrirlo. Es necesario indicarle dos parametros a la hora de la ejecución, para ello debemos editar la configuración del main.
+  Para ejecutarlo desde IntelliJ debemos descargarnos el proyecto desde el repositorio de github (https://github.com/Jose-zapataguil/ProcesarJSON) y abrirlo. Es necesario indicarle la ruta del fichero JSON de configuracion a la hora de la ejecución, para ello debemos editar la configuración del main.
   
   ![image](https://user-images.githubusercontent.com/81249604/116528719-738faf80-a8dc-11eb-9b7f-16e933deec14.png)
   
-  Indicamos la ruta de entrada y la de salida separadas por un espacio en los argumentos del programa.
+  Indicamos la ruta del fichereo
   
-  ![image](https://user-images.githubusercontent.com/81249604/116529138-e39e3580-a8dc-11eb-9a23-516b001f0c15.png)
+  ![image](https://user-images.githubusercontent.com/81249604/117668218-061a3380-b1a6-11eb-8ebd-f19987e9ab8b.png)
+
   
   Y lo ejecutamos.
   
