@@ -24,8 +24,8 @@ public class Main {
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject object = jsonArray.getJSONObject(i);
                 valores[0] = object.getString("uuaa");
-                valores[1] = object.getString("entrada");
-                valores[2] = object.getString("salida");
+                valores[1] = object.getString("input");
+                valores[2] = object.getString("output");
                 valores[3] = object.getString("releasekirby");
                 valores[4] = object.getString("versionkirby");
                 valores[5] = object.getString("artifactUrl");
