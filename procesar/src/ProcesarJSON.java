@@ -55,7 +55,7 @@ public class ProcesarJSON {
             }
             if (crear) {
                 json.put("streaming", false);
-                json.put("params", params);
+                json.put("params", this.params);
                 json.put("env", new JSONObject());
                 json.put("kind", "processing");
                 gf.CrearFichero(tipo, this.rutaSalida, this.uuaa, _id, json.toString(4));
@@ -69,7 +69,7 @@ public class ProcesarJSON {
         if (configUrl.contains(this.uuaa)) {
             this.json.put("runtime", runtime.get("id") + ":" + runtime.get("version"));
             if (old_params.has("extraLibs")) {
-                params = obtenerParams(old_params);
+                this.params = obtenerParams(old_params);
                 JSONArray tags = new JSONArray();
                 if (_id.contains("raw")) {
                     tags.put("workday");
@@ -113,7 +113,7 @@ public class ProcesarJSON {
         boolean crear = true;
         if (configUrl.contains(this.uuaa)) {
             json.put("runtime", runtime.get("id"));
-            params = old_params;
+            this.params = old_params;
             JSONArray tags = new JSONArray();
             if (_id.contains("raw")) {
                 tags.put("workday");
@@ -176,23 +176,23 @@ public class ProcesarJSON {
     }
 
     private JSONObject obtenerParams(JSONObject old_params) {
-        JSONObject params = new JSONObject();
-        if (!params.has("sparkHistoryEnabled")) {
-            params.put("sparkHistoryEnabled", true);
+        JSONObject param = new JSONObject();
+        if (!param.has("sparkHistoryEnabled")) {
+            param.put("sparkHistoryEnabled", true);
         } else {
-            params.put("sparkHistoryEnabled", old_params.get("sparkHistoryEnabled"));
+            param.put("sparkHistoryEnabled", old_params.get("sparkHistoryEnabled"));
         }
-        params.put("mainClass", old_params.get("mainClass"));
+        param.put("mainClass", old_params.get("mainClass"));
         if (this.artifactUrl.equalsIgnoreCase("NA")) {
-            params.put("artifactUrl", old_params.get("artifactUrl"));
+            param.put("artifactUrl", old_params.get("artifactUrl"));
         } else {
-            params.put("artifactUrl", this.artifactUrl);
+            param.put("artifactUrl", this.artifactUrl);
         }
         if (this.extraLibs.equalsIgnoreCase("NA")) {
-            params.put("extraLibs", old_params.get("extraLibs"));
+            param.put("extraLibs", old_params.get("extraLibs"));
         } else {
-            params.put("extraLibs", this.extraLibs);
+            param.put("extraLibs", this.extraLibs);
         }
-        return params;
+        return param;
     }
 }
