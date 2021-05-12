@@ -63,6 +63,9 @@ Nos deberá crear una estructura de directorios parecida a esta.
   ![image](https://user-images.githubusercontent.com/81249604/117668737-83de3f00-b1a6-11eb-8031-04cb9f94dba7.png)
 
 
+## Diagrama de flujo
+![DiagramaCorreo](https://user-images.githubusercontent.com/79518642/117932815-23174980-b301-11eb-9296-016a4b75c38d.png)
+
 
 
 
