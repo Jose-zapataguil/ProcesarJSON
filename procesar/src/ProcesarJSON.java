@@ -1,6 +1,13 @@
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+/** @file ProcesarJSON.java
+ *  @class ProcesarJSON
+ *  @brief Representa la clase que se va a encargar de procesar los objetos de los archivos representados en el fichero de configuración
+ *  para extraer de ellos cierta información y representarla en nuevos ficheros de salida.
+ *
+ *  Tiene un constructor al cual se le pasa como argumento el String valores, con los datos obtenidos de config.json
+ */
 
 public class ProcesarJSON {
     private JSONArray array;
@@ -31,6 +38,11 @@ public class ProcesarJSON {
         this.json = new JSONObject();
         this.params = new JSONObject();
     }
+
+    /**
+     * @brief La función procesar se encarga de obtener cierta información de cada objeto para ponerla en un JSON y llamar a CrearFichero de
+     * la clase GenerarFicheros para que se genere un archivo con esa información solo si crear es true
+     */
 
     public void procesar() {
         for (Object o : array) {
@@ -63,6 +75,18 @@ public class ProcesarJSON {
         }
         this.gf.cerrarLog();
     }
+
+    /**
+     * @brief La función procesarKirby comprueba que el _id del objeto contiene una serie de palabras y en función de eso coloca ciertos
+     * términos en un array de JSON llamado tags. También comprueba si en el fichero de configuración hay algo escrito en la versión correspondiente,
+     * y si es así cambia la ruta de configuración usando rutaConfig de esta misma clase.
+     *
+     * @param configUrl
+     * @param runtime
+     * @param old_params
+     * @param _id
+     * @return "crear" a true cuando el job tiene el parámetro "extraLibs" o cuando configUrl contiene la uuaa del fichero de configuración
+     */
 
     private boolean procesarKirby(String configUrl, JSONObject runtime, JSONObject old_params, String _id) {
         boolean crear = true;
@@ -109,6 +133,18 @@ public class ProcesarJSON {
         return crear;
     }
 
+    /**
+     * @brief La función procesarHammurabi comprueba que el _id del objeto contiene una serie de palabras y en función de eso coloca ciertos
+     * términos en un array de JSON llamado tags. También comprueba si en el fichero de configuración hay algo escrito en la versión correspondiente,
+     * y si es así cambia la ruta de configuración usando rutaConfig de esta misma clase.
+     *
+     * @param configUrl
+     * @param runtime
+     * @param old_params
+     * @param _id
+     * @return "crear" a true cuando el parámetro configUrl contiene la uuaa del fichero de configuración
+     */
+
     private boolean procesarHammurabi(String configUrl, JSONObject runtime, JSONObject old_params, String _id) {
         boolean crear = true;
         if (configUrl.contains(this.uuaa)) {
@@ -153,10 +189,27 @@ public class ProcesarJSON {
         return crear;
     }
 
+    /**
+     * @brief La función procesarHDFS, para el caso en el que el id de runtime no es spark ni hammurabi, pone el suyo particular en el objeto JSON
+     * que luego se pasará a un archivo .json y en tags pone un JSONArray vacío
+     *
+     * @param runtime
+     */
+
     private void procesarHDFS(JSONObject runtime) {
         json.put("runtime", runtime.get("id"));
         json.put("tags", new JSONArray());
     }
+
+    /**
+     * @brief La función rutaConfig crea una nueva ruta de configuración en función de la versión y release que hay en el fichero de configuración
+     *
+     * @param oldRuta
+     * @param version
+     * @param uuaa
+     * @param release
+     * @return Un String con la ruta de configuración modificada
+     */
 
     private static String rutaConfig(String oldRuta, String version, String uuaa, String release) {
         String newRuta = oldRuta.substring(0, oldRuta.indexOf("artifactory/") + 12);
@@ -174,6 +227,14 @@ public class ProcesarJSON {
         }
         return newRuta;
     }
+
+    /**
+     * @brief La función obtenerParams dependiendo de si el objeto tiene una serie de parámetros o no, los deja o los añade, utilizando para el caso
+     * de "artifactUrl" y "extraLibs" los del fichero de configuración
+     *
+     * @param old_params
+     * @return Un objeto JSON que contiene los parámetros
+     */
 
     private JSONObject obtenerParams(JSONObject old_params) {
         JSONObject param = new JSONObject();
